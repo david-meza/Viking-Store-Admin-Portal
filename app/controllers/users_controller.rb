@@ -18,7 +18,7 @@ class UsersController < ApplicationController
       flash[:success] = "New User Created"
       redirect_to @user
     else
-      flash[:error] = "Failed to Create New User"
+      flash[:error] = @user.errors.full_messages.first
       render :new
     end
   end
@@ -33,7 +33,7 @@ class UsersController < ApplicationController
       flash[:success] = "User Updated"
       redirect_to @user
     else
-      flash[:error] = "Failed to Update User"
+      flash[:error] = @user.errors.full_messages.first
       render :edit
     end
   end
@@ -44,7 +44,7 @@ class UsersController < ApplicationController
       flash[:success] = "User Deleted"
       redirect_to index
     else
-      flash[:error] = "Failed to Delete User"
+      flash[:error] = @user.errors.full_messages.first
       render :edit
     end
   end

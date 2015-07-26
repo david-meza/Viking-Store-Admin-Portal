@@ -4,7 +4,4 @@ class StaticPagesController < ApplicationController
     @users = User.all
   end
 
-  def orders
-
-  end
 end

@@ -34,7 +34,7 @@
             <% @users.each do |user| %>
               <tr>
                 <td> <%= user.id %> </td>
-                <td> <%= user.full_name %> </td>
+                <td> <%= user.full_user_name %> </td>
                 <td> <%= user.created_at.to_date %> </td>
                 <td> <%= user.find_city_name %> </td>
                 <td> <%= user.find_state_name %> </td>
